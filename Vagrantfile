@@ -6,8 +6,6 @@ Vagrant.configure("2") do |config|
     mmm8.vm.network "forwarded_port", guest: 80, host: 8888,host_ip: "127.0.0.1"
     mmm8.vm.network "forwarded_port", guest: 443, host: 8443, host_ip: "127.0.0.1"
 
-
-
     mmm8.vm.provider "virtualbox" do |vb|
       vb.name = "mmm8"
       vb.gui = false
@@ -31,8 +29,7 @@ Vagrant.configure("2") do |config|
         httpd -t
         systemctl start httpd
         systemctl enable httpd
-        
-        
+                
     SHELL
   end
   
